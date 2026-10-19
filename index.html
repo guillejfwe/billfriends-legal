@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad - BillFriends</title>
+  <meta name="description" content="Política de Privacidad oficial de la aplicación BillFriends, elaborada conforme al RGPD y los requisitos de Google Play Store.">
+  <style>
+    :root {
+      --bg-dark: #090e17;
+      --card-bg: #111a2e;
+      --card-border: #1e293b;
+      --primary: #2dd4bf;
+      --primary-glow: rgba(45, 212, 191, 0.2);
+      --secondary: #38bdf8;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --accent-badge: rgba(45, 212, 191, 0.12);
+      --code-bg: #040913;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 40px 20px 80px 20px;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      margin-bottom: 36px;
+      text-align: left;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 28px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-badge);
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    h1 span.highlight {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .meta-info {
+      color: var(--text-muted);
+      font-size: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* Navigation TOC */
+    .toc-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 22px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .toc-card h3 {
+      font-size: 15px;
+      color: var(--secondary);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 8px 16px;
+      list-style: none;
+    }
+
+    .toc-grid a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.15s ease;
+    }
+
+    .toc-grid a:hover {
+      color: var(--primary);
+    }
+
+    /* Sections */
+    section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 30px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    h2 {
+      font-size: 21px;
+      color: #ffffff;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
+    }
+
+    h3 {
+      font-size: 17px;
+      color: var(--secondary);
+      margin: 20px 0 10px 0;
+    }
+
+    p {
+      color: #cbd5e1;
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 16px;
+      color: #cbd5e1;
+      font-size: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    li strong {
+      color: #ffffff;
+    }
+
+    .highlight-box {
+      background: rgba(14, 165, 233, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: #bae6fd;
+    }
+
+    .placeholder-field {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fcd34d;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px dashed #f59e0b;
+      font-family: monospace;
+      font-weight: 600;
+    }
+
+    /* Table styling */
+    .table-container {
+      overflow-x: auto;
+      margin: 16px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    th {
+      background: #0b1322;
+      color: var(--secondary);
+      padding: 12px 14px;
+      border-bottom: 2px solid var(--card-border);
+      font-weight: 700;
+    }
+
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--card-border);
+      color: #cbd5e1;
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 24px;
+      border-top: 1px solid var(--card-border);
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 24px 14px 60px 14px;
+      }
+      section {
+        padding: 20px 16px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="badge">⚖️ Información Legal & RGPD</div>
+      <h1>Política de Privacidad de <span class="highlight">BillFriends</span></h1>
+      <div class="meta-info">
+        <span>📅 Última actualización: <strong>19 de octubre de 2026</strong></span>
+        <span>📱 Aplicación: <strong>BillFriends</strong></span>
+      </div>
+    </header>
+
+    <nav class="toc-card">
+      <h3>Índice de Contenidos</h3>
+      <ul class="toc-grid">
+        <li><a href="#responsable">1. Responsable del Tratamiento</a></li>
+        <li><a href="#datos">2. Información que Recopilamos</a></li>
+        <li><a href="#finalidad">3. Finalidad del Tratamiento</a></li>
+        <li><a href="#base-legal">4. Base Legal (RGPD)</a></li>
+        <li><a href="#permisos">5. Permisos del Dispositivo</a></li>
+        <li><a href="#terceros">6. Proveedores y Terceros</a></li>
+        <li><a href="#transferencias">7. Transferencias Internacionales</a></li>
+        <li><a href="#conservacion">8. Conservación y Supresión</a></li>
+        <li><a href="#derechos">9. Derechos del Usuario (ARCO)</a></li>
+        <li><a href="#menores">10. Menores de Edad</a></li>
+        <li><a href="#cambios">11. Cambios en la Política</a></li>
+        <li><a href="#contacto">12. Contacto</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- 1. Responsable -->
+      <section id="responsable">
+        <h2>1. Responsable del Tratamiento de los Datos</h2>
+        <p>En cumplimiento de lo dispuesto en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), el responsable del tratamiento de los datos recabados a través de <strong>BillFriends</strong> es:</p>
+        <ul>
+          <li><strong>Titular / Desarrollador:</strong> <span class="placeholder-field">[Tu Nombre o Nombre de Desarrollador / Empresa]</span></li>
+          <li><strong>Correo de Contacto y Soporte:</strong> <span class="placeholder-field">helpbfapp@gmail.com</span></li>
+          <li><strong>Finalidad del servicio:</strong> Plataforma para la organización, división equitativa y compensación de gastos compartidos entre amigos, parejas, compañeros de piso y grupos.</li>
+        </ul>
+      </section>
+
+      <!-- 2. Información -->
+      <section id="datos">
+        <h2>2. Información y Datos que Recopilamos</h2>
+        <p>Recopilamos únicamente los datos imprescindibles para brindarte los servicios de gestión de saldos y reparto de gastos:</p>
+        
+        <h3>A. Datos de la Cuenta y Perfil de Usuario</h3>
+        <ul>
+          <li><strong>Identificadores de usuario:</strong> Identificador único del sistema (UUID), nombre, apellidos y nombre de usuario único (<em>nick</em>), necesarios para que tus amigos puedan encontrarte e invitarte a grupos.</li>
+          <li><strong>Datos de contacto y autenticación:</strong> Correo electrónico y credenciales de acceso seguro.</li>
+          <li><strong>Número de teléfono móvil:</strong> Utilizado para identificarte en el ecosistema y agilizar la recepción y cobro de importes mediante servicios de pago instantáneo (como Bizum).</li>
+          <li><strong>Información y preferencias de pago:</strong> Método preferido (Bizum, cuenta bancaria o PayPal) para facilitar que otros participantes te reembolsen tu saldo.</li>
+          <li><strong>Avatar o imagen de perfil:</strong> Fotografía que decidas vincular para distinguirte visualmente en tus círculos.</li>
+        </ul>
+
+        <h3>B. Datos de Gastos, Grupos y Transacciones</h3>
+        <ul>
+          <li><strong>Registros de gastos:</strong> Título del gasto, importe total, fecha, moneda, notas explicativas y desglose por consumos o productos individuales.</li>
+          <li><strong>Grupos de amigos y membresías:</strong> Nombres de los grupos (ej. "Viaje Roma", "Piso"), integrantes, roles asignados y registros de balance del monedero continuo.</li>
+        </ul>
+
+        <h3>C. Fotografías y Documentos de Tickets</h3>
+        <ul>
+          <li><strong>Imágenes de recibos y facturas:</strong> Fotografías de tickets capturadas con la cámara o cargadas desde tu galería con el propósito exclusivo de escanear los conceptos y agilizar la división de cuentas.</li>
+        </ul>
+
+        <h3>D. Datos Técnicos y de Diagnóstico</h3>
+        <ul>
+          <li><strong>Token de Notificaciones Push (FCM Token):</strong> Identificador técnico que permite enviarte avisos de gastos, invitaciones o solicitudes a tu teléfono.</li>
+          <li><strong>Datos analíticos y de estabilidad:</strong> Registros técnicos anónimos ante caídas de la app (Crashlytics) para depurar errores y garantizar el rendimiento del sistema.</li>
+        </ul>
+      </section>
+
+      <!-- 3. Finalidad -->
+      <section id="finalidad">
+        <h2>3. Finalidad del Tratamiento</h2>
+        <p>Los datos personales que nos facilitas son tratados para los siguientes fines legítimos:</p>
+        <ol>
+          <li><strong>Gestión del servicio:</strong> Creación de tu perfil, administración de grupos, cómputo automático de saldos y cálculo de deudas exactas evitando cálculos manuales.</li>
+          <li><strong>Digitalización inteligente de tickets (IA & OCR):</strong> Procesamiento automatizado de las imágenes de tus tickets mediante algoritmos de reconocimiento óptico de caracteres para extraer productos, importes y totales.</li>
+          <li><strong>Notificaciones y comunicaciones:</strong> Enviarte alertas push sobre nuevos gastos registrados en tus grupos, recordatorios de liquidación e invitaciones de amigos.</li>
+          <li><strong>Mantenimiento y seguridad técnica:</strong> Monitorización del correcto funcionamiento de la plataforma, prevención de accesos no autorizados y resolución de incidencias.</li>
+        </ol>
+      </section>
+
+      <!-- 4. Base Legal -->
+      <section id="base-legal">
+        <h2>4. Base Legal para el Tratamiento</h2>
+        <p>De conformidad con el artículo 6 del RGPD, las bases que legitiman el tratamiento de tus datos son:</p>
+        <ul>
+          <li><strong>Ejecución del contrato / prestación del servicio (Art. 6.1.b):</strong> El tratamiento de tus datos de usuario, transacciones y grupos es indispensable para ejecutar las funciones acordadas al instalar y registrarte en la aplicación.</li>
+          <li><strong>Consentimiento del interesado (Art. 6.1.a):</strong> Al autorizar el acceso a la cámara de tu dispositivo para capturar tickets y al activar los avisos de notificaciones en el sistema operativo. Puedes retirar este consentimiento en cualquier momento desde los ajustes de tu terminal.</li>
+          <li><strong>Interés legítimo (Art. 6.1.f):</strong> Asegurar la fiabilidad técnica de la aplicación, mejorar la experiencia de usuario y salvaguardar la seguridad de la infraestructura.</li>
+        </ul>
+      </section>
+
+      <!-- 5. Permisos -->
+      <section id="permisos">
+        <h2>5. Permisos Solicitados en el Dispositivo</h2>
+        <p>Para su correcto funcionamiento, <strong>BillFriends</strong> puede requerir que otorgues los siguientes permisos en tu dispositivo Android o iOS:</p>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Permiso</th>
+                <th>Finalidad Exclusiva</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>CAMERA</code></td>
+                <td>Permitirte fotografiar recibos y facturas en tiempo real para que la IA extraiga los importes. No se accede a la cámara sin tu acción directa.</td>
+              </tr>
+              <tr>
+                <td><code>POST_NOTIFICATIONS</code></td>
+                <td>Enviarte avisos instantáneos sobre nuevos gastos en tus grupos, invitaciones o saldos pendientes.</td>
+              </tr>
+              <tr>
+                <td><code>INTERNET</code></td>
+                <td>Comunicar la aplicación con la base de datos segura en la nube para sincronizar cuentas y balances entre usuarios.</td>
+              </tr>
+              <tr>
+                <td><code>VIBRATE</code></td>
+                <td>Generar retroalimentación háptica al recibir notificaciones o confirmar acciones en la interfaz.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 6. Terceros -->
+      <section id="terceros">
+        <h2>6. Destinatarios y Proveedores de Servicios (Terceros)</h2>
+        <p><strong>BillFriends nunca vende ni alquila tus datos personales a empresas de publicidad o intermediarios de datos.</strong> Compartimos información estrictamente necesaria con proveedores tecnológicos de primer nivel para la operativa del servicio:</p>
+        <ul>
+          <li><strong>Supabase Inc.:</strong> Proveedor de base de datos relacional en la nube, autenticación segura y almacenamiento cifrado de archivos e imágenes.</li>
+          <li><strong>Google LLC (Firebase):</strong> 
+            <ul>
+              <li><em>Firebase Cloud Messaging:</em> Envío y entrega de notificaciones push a tu dispositivo.</li>
+              <li><em>Firebase Crashlytics & Analytics:</em> Recopilación de informes de errores técnicos anónimos y métricas operativas de la aplicación.</li>
+            </ul>
+          </li>
+          <li><strong>Servicios de Procesamiento IA / OCR:</strong> Modelos de visión computacional y lenguaje para la extracción matemática y textual de los tickets. Las imágenes se procesan de forma transitoria para extraer los importes del gasto.</li>
+        </ul>
+      </section>
+
+      <!-- 7. Transferencias -->
+      <section id="transferencias">
+        <h2>7. Transferencias Internacionales de Datos</h2>
+        <p>Algunos de nuestros proveedores de infraestructura en la nube (como Google o Supabase) pueden almacenar datos en servidores situados fuera del Espacio Económico Europeo (EEE). En todos los casos, nos aseguramos de que dichas transferencias cumplan con las garantías legales exigidas por el RGPD, basándose en <strong>Cláusulas Contractuales Tipo (SCC)</strong> aprobadas por la Comisión Europea o marcos de adecuación legalmente reconocidos.</p>
+      </section>
+
+      <!-- 8. Conservación -->
+      <section id="conservacion">
+        <h2>8. Conservación de los Datos y Supresión</h2>
+        <p>Tus datos personales se conservarán mientras mantengas activa tu cuenta de usuario en BillFriends. Si decides eliminar tu cuenta, todos tus datos identificativos (nombre, correo, teléfono y avatar) serán eliminados o permanentemente anonimizados en un plazo máximo de 30 días naturales, manteniendo únicamente registros numéricos anónimos para la coherencia contable de los grupos en los que participaste.</p>
+      </section>
+
+      <!-- 9. Derechos -->
+      <section id="derechos">
+        <h2>9. Derechos del Usuario (ARCO / RGPD)</h2>
+        <p>Como usuario titular de los datos, la legislación te reconoce los siguientes derechos que puedes ejercer libremente en cualquier momento:</p>
+        <ul>
+          <li><strong>Derecho de Acceso:</strong> Solicitar confirmación de qué datos tuyos estamos tratando y obtener una copia de los mismos.</li>
+          <li><strong>Derecho de Rectificación:</strong> Modificar directamente tus datos desactualizados o inexactos desde la pantalla de perfil de la app.</li>
+          <li><strong>Derecho de Supresión («Derecho al olvido»):</strong> Solicitar el borrado definitivo de tu cuenta y datos personales asociados.</li>
+          <li><strong>Derecho a la Limitación del Tratamiento y Oposición:</strong> Solicitar que restrinjamos el tratamiento de tus datos bajo ciertas condiciones o revocar tu consentimiento previo.</li>
+          <li><strong>Derecho a la Portabilidad:</strong> Recibir tus datos personales en un formato estructurado y de lectura mecánica común.</li>
+        </ul>
+        <div class="highlight-box">
+          Para solicitar el ejercicio de cualquiera de tus derechos o pedir el borrado inmediato de tu cuenta, envía un mensaje a <span class="placeholder-field">helpbfapp@gmail.com</span> indicando tu correo registrado y tu nombre de usuario (<em>nick</em>).
+        </div>
+      </section>
+
+      <!-- 10. Menores -->
+      <section id="menores">
+        <h2>10. Protección de Menores</h2>
+        <p>BillFriends está dirigida al público general y no está orientada intencionadamente a menores de 14 años (o la edad mínima legal que aplique en tu país). No recopilamos conscientemente datos de menores. Si tenemos conocimiento de que se han recabado datos de un menor sin el debido consentimiento parental, procederemos a su inmediata eliminación de nuestros servidores.</p>
+      </section>
+
+      <!-- 11. Cambios -->
+      <section id="cambios">
+        <h2>11. Modificaciones de la Política de Privacidad</h2>
+        <p>Nos reservamos el derecho de actualizar esta Política de Privacidad para adaptarla a futuras actualizaciones de la aplicación, requisitos legales o nuevas prácticas de privacidad. Cualquier cambio significativo será comunicado mediante un aviso visible dentro de la app o actualizando la fecha indicada al inicio de esta página.</p>
+      </section>
+
+      <!-- 12. Contacto -->
+      <section id="contacto">
+        <h2>12. Contacto y Consultas</h2>
+        <p>Para resolver cualquier consulta, sugerencia o reclamación relativa a tu privacidad o al tratamiento de tus datos, puedes ponerte en contacto con nosotros en:</p>
+        <ul>
+          <li><strong>Correo electrónico:</strong> <a href="mailto:helpbfapp@gmail.com" style="color: var(--primary); text-decoration: none;"><span class="placeholder-field"helpbfapp@gmail.com</span></a></li>
+          <li><strong>Aplicación:</strong> BillFriends</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 BillFriends. Todos los derechos reservados.</p>
+      <p style="margin-top: 6px;"><a href="#top">↑ Volver al inicio</a></p>
+    </footer>
+  </div>
+
+</body>
+</html>
