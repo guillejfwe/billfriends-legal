@@ -17,7 +17,6 @@
       --text-muted: #94a3b8;
       --text-dim: #64748b;
       --accent-badge: rgba(45, 212, 191, 0.12);
-      --code-bg: #040913;
     }
 
     * {
@@ -173,6 +172,18 @@
       color: #ffffff;
     }
 
+    a.legal-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    a.legal-link:hover {
+      text-decoration: underline;
+      color: var(--secondary);
+    }
+
     .highlight-box {
       background: rgba(14, 165, 233, 0.08);
       border: 1px solid rgba(56, 189, 248, 0.25);
@@ -181,16 +192,6 @@
       margin: 16px 0;
       font-size: 14px;
       color: #bae6fd;
-    }
-
-    .placeholder-field {
-      background: rgba(245, 158, 11, 0.15);
-      color: #fcd34d;
-      padding: 2px 6px;
-      border-radius: 4px;
-      border: 1px dashed #f59e0b;
-      font-family: monospace;
-      font-weight: 600;
     }
 
     /* Table styling */
@@ -259,7 +260,7 @@
     }
   </style>
 </head>
-<body>
+<body id="top">
 
   <div class="container">
     <header>
@@ -295,8 +296,8 @@
         <h2>1. Responsable del Tratamiento de los Datos</h2>
         <p>En cumplimiento de lo dispuesto en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), el responsable del tratamiento de los datos recabados a través de <strong>BillFriends</strong> es:</p>
         <ul>
-          <li><strong>Titular / Desarrollador:</strong> <span class="placeholder-field">[Tu Nombre o Nombre de Desarrollador / Empresa]</span></li>
-          <li><strong>Correo de Contacto y Soporte:</strong> <span class="placeholder-field">helpbfapp@gmail.com</span></li>
+          <li><strong>Titular / Desarrollador:</strong> Guillermo del Campo Peinado</li>
+          <li><strong>Correo de Contacto y Soporte:</strong> <a class="legal-link" href="mailto:helpbfapp@gmail.com">helpbfapp@gmail.com</a></li>
           <li><strong>Finalidad del servicio:</strong> Plataforma para la organización, división equitativa y compensación de gastos compartidos entre amigos, parejas, compañeros de piso y grupos.</li>
         </ul>
       </section>
@@ -318,7 +319,7 @@
         <h3>B. Datos de Gastos, Grupos y Transacciones</h3>
         <ul>
           <li><strong>Registros de gastos:</strong> Título del gasto, importe total, fecha, moneda, notas explicativas y desglose por consumos o productos individuales.</li>
-          <li><strong>Grupos de amigos y membresías:</strong> Nombres de los grupos (ej. "Viaje Roma", "Piso"), integrantes, roles asignados y registros de balance del monedero continuo.</li>
+          <li><strong>Grupos de amigos y membresías:</strong> Nombres de los grupos (ej. "Viaje Roma", "Piso compartido"), integrantes, roles asignados y registros de balance del monedero continuo.</li>
         </ul>
 
         <h3>C. Fotografías y Documentos de Tickets</h3>
@@ -350,7 +351,7 @@
         <h2>4. Base Legal para el Tratamiento</h2>
         <p>De conformidad con el artículo 6 del RGPD, las bases que legitiman el tratamiento de tus datos son:</p>
         <ul>
-          <li><strong>Ejecución del contrato / prestación del servicio (Art. 6.1.b):</strong> El tratamiento de tus datos de usuario, transacciones y grupos es indispensable para ejecutar las funciones acordadas al instalar y registrarte en la aplicación.</li>
+          <li><strong>Ejecución del contrato / prestación del servicio (Art. 6.1.b):</strong> El tratamiento de tus datos de usuario, transacciones y grupos es indispensable para ejecutar las funciones acordadas al registrarte en la aplicación.</li>
           <li><strong>Consentimiento del interesado (Art. 6.1.a):</strong> Al autorizar el acceso a la cámara de tu dispositivo para capturar tickets y al activar los avisos de notificaciones en el sistema operativo. Puedes retirar este consentimiento en cualquier momento desde los ajustes de tu terminal.</li>
           <li><strong>Interés legítimo (Art. 6.1.f):</strong> Asegurar la fiabilidad técnica de la aplicación, mejorar la experiencia de usuario y salvaguardar la seguridad de la infraestructura.</li>
         </ul>
@@ -359,7 +360,7 @@
       <!-- 5. Permisos -->
       <section id="permisos">
         <h2>5. Permisos Solicitados en el Dispositivo</h2>
-        <p>Para su correcto funcionamiento, <strong>BillFriends</strong> puede requerir que otorgues los siguientes permisos en tu dispositivo Android o iOS:</p>
+        <p>Para su correcto funcionamiento, <strong>BillFriends</strong> puede requerir que otorgues los siguientes permisos en tu dispositivo móvil:</p>
         <div class="table-container">
           <table>
             <thead>
@@ -393,7 +394,7 @@
       <!-- 6. Terceros -->
       <section id="terceros">
         <h2>6. Destinatarios y Proveedores de Servicios (Terceros)</h2>
-        <p><strong>BillFriends nunca vende ni alquila tus datos personales a empresas de publicidad o intermediarios de datos.</strong> Compartimos información estrictamente necesaria con proveedores tecnológicos de primer nivel para la operativa del servicio:</p>
+        <p><strong>BillFriends nunca vende ni alquila tus datos personales a empresas de publicidad ni a intermediarios de datos.</strong> Compartimos información estrictamente necesaria con proveedores tecnológicos de primer nivel para la operativa del servicio:</p>
         <ul>
           <li><strong>Supabase Inc.:</strong> Proveedor de base de datos relacional en la nube, autenticación segura y almacenamiento cifrado de archivos e imágenes.</li>
           <li><strong>Google LLC (Firebase):</strong> 
@@ -430,7 +431,7 @@
           <li><strong>Derecho a la Portabilidad:</strong> Recibir tus datos personales en un formato estructurado y de lectura mecánica común.</li>
         </ul>
         <div class="highlight-box">
-          Para solicitar el ejercicio de cualquiera de tus derechos o pedir el borrado inmediato de tu cuenta, envía un mensaje a <span class="placeholder-field">helpbfapp@gmail.com</span> indicando tu correo registrado y tu nombre de usuario (<em>nick</em>).
+          Para solicitar el ejercicio de cualquiera de tus derechos o pedir el borrado inmediato de tu cuenta, envía un mensaje a <a class="legal-link" href="mailto:helpbfapp@gmail.com" style="font-weight: 700;">helpbfapp@gmail.com</a> indicando tu correo registrado y tu nombre de usuario (<em>nick</em>).
         </div>
       </section>
 
@@ -451,7 +452,8 @@
         <h2>12. Contacto y Consultas</h2>
         <p>Para resolver cualquier consulta, sugerencia o reclamación relativa a tu privacidad o al tratamiento de tus datos, puedes ponerte en contacto con nosotros en:</p>
         <ul>
-          <li><strong>Correo electrónico:</strong> <a href="mailto:helpbfapp@gmail.com" style="color: var(--primary); text-decoration: none;"><span class="placeholder-field"helpbfapp@gmail.com</span></a></li>
+          <li><strong>Titular:</strong> Guillermo del Campo Peinado</li>
+          <li><strong>Correo electrónico:</strong> <a class="legal-link" href="mailto:helpbfapp@gmail.com">helpbfapp@gmail.com</a></li>
           <li><strong>Aplicación:</strong> BillFriends</li>
         </ul>
       </section>
